@@ -117,7 +117,7 @@ export default function Page() {
      <section className="relative w-full h-auto md:h-screen isolate">
   {/* 데스크톱 이미지 */}
   <Image
-    src="/image/main7.png"
+    src="/image/main7.PNG"
     alt="메인 이미지"
     fill
     className="absolute inset-0 object-contain hidden md:block"
@@ -125,7 +125,7 @@ export default function Page() {
 
   {/* 모바일 이미지 */}
   <Image
-    src="/image/main7-m.png"
+    src="/image/main7-m.PNG"
     alt="모바일 메인 이미지"
     width={400}
     height={300}
@@ -150,7 +150,7 @@ export default function Page() {
           {/* 오른쪽 이미지 */}
           <div className="md:w-1/2 flex justify-center">
             <img
-              src="/image/map2.png" // 이미지 경로
+              src="/image/map2.PNG" // 이미지 경로
               alt="법률사무소 적벽 위치"
               className="w-[600px] h-auto rounded-lg shadow-lg"
             />

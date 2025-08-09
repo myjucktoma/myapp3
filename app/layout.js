@@ -8,7 +8,7 @@ export const metadata = {
     siteName: '법률사무소 적벽',
     images: [
       {
-        url: '/og-image.jpg', // public 폴더 안 이미지
+        url: '/image/main7-m.PNG', // public 폴더 안 이미지
         width: 1200,
         height: 630,
       },

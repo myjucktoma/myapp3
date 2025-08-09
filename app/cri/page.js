@@ -156,7 +156,7 @@ export default function Cri() {
                     {Array.from({ length: 24 }).map((_, index) => (
                         <img
                             key={index}
-                            src={`/image/s${index + 1}.png`} // 이미지 경로
+                            src={`/image/s${index + 1}.PNG`} // 이미지 경로
                             alt={`이미지 ${index + 1}`}
                             className="w-full h-auto object-contain rounded-lg shadow-lg"
                         />

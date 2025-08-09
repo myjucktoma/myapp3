@@ -1,0 +1,110 @@
+@import 'tailwindcss';
+
+
+html, body { height: 100%; }
+body { margin: 0; overflow-x: hidden; background:#000; } /* 가로 스크롤/여백 방지 */
+
+
+@font-face {
+  /*font-family: 'AritaBuri';*/
+  font-family: 'batang';
+  /*src: url('/fonts/AritaBuri.ttf') format('truetype');*/
+  /*src: url('/fonts/SeoulHangangB.ttf') format('truetype');*/
+  src: url('/fonts/batang.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  /*font-family: 'AritaBuri';*/
+  font-family: 'Pretendard';
+  /*src: url('/fonts/AritaBuri.ttf') format('truetype');*/
+  /*src: url('/fonts/SeoulHangangB.ttf') format('truetype');*/
+  src: url('/fonts/HMKMM.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'WarhavenRegular';
+  src: url('/fonts/NEXON_Warhaven_Regular.ttf') format('truetype');
+  font-weight: 700; /* Bold 폰트면 700 권장 */
+  font-style: normal;
+  font-display: swap;
+}
+/* ① 폰트 임포트 */
+@font-face {
+  font-family: 'WarhavenBold';
+  src: url('/fonts/NEXON_Warhaven_Bold.ttf') format('truetype');
+  font-weight: 700; /* Bold 폰트면 700 권장 */
+  font-style: normal;
+  font-display: swap;
+}
+
+.text-texture {
+  font-family: 'batang', sans-serif;
+  color: transparent;
+  background-image: url('/texture/gold_braken15.png'); /* 고해상도 */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 120% auto; /* 과한 확대 피하기, 상황에 맞게 조절 */
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  
+     -webkit-text-stroke: 1px rgba(0,0,0,0.5); /* 외곽선 두께 & 색상 */
+}
+
+
+/* (선택) 어두운 배경에서 더 또렷하게 보이게 하는 외곽선 효과 */
+.text-stroke {
+  -webkit-text-stroke: 1px rgba(0,0,0,0.35);
+  text-shadow: 0 1px 2px rgba(0,0,0,0.4);
+}
+
+/* (선택) 이미지 대신 그라디언트 질감 */
+.text-gradient {
+  background: linear-gradient(135deg, #c9c9c9 0%, #6f6f6f 45%, #2f2f2f 100%);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+
+
+
+body {
+  
+  font-family: 'Pretendard', sans-serif;
+font-family: 'WarhavenBold', sans-serif;
+font-family: 'WarhavenRegular', sans-serif;
+font-family: 'Gulim', sans-serif;
+font-family: 'batang', sans-serif;
+}
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+/*
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+  */

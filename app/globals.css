@@ -5,26 +5,7 @@ html, body { height: 100%; }
 body { margin: 0; overflow-x: hidden; background:#000; } /* 가로 스크롤/여백 방지 */
 
 
-@font-face {
-  /*font-family: 'AritaBuri';*/
-  font-family: 'batang';
-  /*src: url('/fonts/AritaBuri.ttf') format('truetype');*/
-  /*src: url('/fonts/SeoulHangangB.ttf') format('truetype');*/
-  src: url('/fonts/batang.TTF') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  /*font-family: 'AritaBuri';*/
-  font-family: 'Pretendard';
-  /*src: url('/fonts/AritaBuri.ttf') format('truetype');*/
-  /*src: url('/fonts/SeoulHangangB.ttf') format('truetype');*/
-  src: url('/fonts/HMKMM.TTF') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
+
 @font-face {
   font-family: 'WarhavenRegular';
   src: url('/fonts/NEXON_Warhaven_Regular.ttf') format('truetype');
@@ -71,16 +52,11 @@ body { margin: 0; overflow-x: hidden; background:#000; } /* 가로 스크롤/여
 }
 
 
-
-
 body {
-  
-  font-family: 'Pretendard', sans-serif;
-font-family: 'WarhavenBold', sans-serif;
-font-family: 'WarhavenRegular', sans-serif;
-font-family: 'Gulim', sans-serif;
-font-family: 'batang', sans-serif;
+  font-family: 'Gulim', 'Arial', 'WarhavenRegular', 'WarhavenBold', sans-serif;
 }
+
+
 @import "tailwindcss";
 
 :root {

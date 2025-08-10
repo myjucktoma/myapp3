@@ -139,7 +139,7 @@ export default function Page() {
           {/* 왼쪽 텍스트 */}
           <div className="md:w-1/2">
             <h2 className="text-4xl font-['WarhavenBold'] tracking-wide text-white">오시는 길</h2>
-            <p className="text-2xl mt-4 text-white font-['gulim']"><br /><br />
+            <p className="text-2xl mt-4 text-white font-['Gulim']"><br /><br />
               [주소] 서울 서초구 서초대로 396 강남빌딩 705호 법률사무소 적벽<br />(강남역 8번 출구)<br /><br />
               [전화] 010-3423-1909, 02-565-1909<br />(변호사 직통)<br /><br />
               [영업시간] 월~금 09시~18시<br />(영업시간 외에도 전화, 문자 가능)<br /><br />
@@ -161,7 +161,7 @@ export default function Page() {
         <div className="mx-auto max-w-[1550px] px-6 flex flex-col md:flex-row items-start gap-8">
           <div className="md:w-1/2">
             <h2 className="text-4xl font-['WarhavenBold'] tracking-wide">대표 변호사 유관우 소개</h2>
-            <p className="text-2xl mt-4 text-white font-['gulim']"><br />
+            <p className="text-2xl mt-4 text-white font-['Gulim']"><br />
               - 고려대학교 법학과 졸업<br />
               - 충남대학교 법학전문대학원 졸업<br />
               - 2014년 변호사 자격 취득<br />

@@ -44,7 +44,7 @@ body { margin: 0; overflow-x: hidden; background:#000; } /* 가로 스크롤/여
 .text-texture {
   font-family: 'batang', sans-serif;
   color: transparent;
-  background-image: url('/texture/gold_braken15.jpg'); /* 고해상도 */
+  background-image: url('/texture/gold_braken15.png'); /* 고해상도 */
   background-repeat: no-repeat;
   background-position: center;
   background-size: 120% auto; /* 과한 확대 피하기, 상황에 맞게 조절 */

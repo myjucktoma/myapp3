@@ -11,9 +11,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 const NAV = [
-  { label: "형사", href: "/cri", img: "/image/cri1.PNG" },
-  { label: "민사", href: "/civil", img: "/image/civil1.PNG" },
-  { label: "IT", href: "/it", img: "/image/it1.PNG" },
+  { label: "형사", href: "/cri", img: "/image/cri1.jpg" },
+  { label: "민사", href: "/civil", img: "/image/civil1.jpg" },
+  { label: "IT", href: "/it", img: "/image/it1.jpg" },
 
 ];
 
@@ -35,7 +35,7 @@ export default function Page() {
       {/* 로고: 뷰포트 기준 좌측 고정 */}
       <div className="flex items-center gap-8">
         <Link href="/" aria-label="Home" className="block">
-          <Image src="/image/j02.png" alt="" width={140} height={36} priority />
+          <Image src="/image/j02.jpg" alt="" width={140} height={36} priority />
         </Link>
 
 
@@ -94,7 +94,7 @@ export default function Page() {
           />
           <div className="absolute right-0 top-0 h-full w-[78%] max-w-[340px] bg-[#0b0b0b] border-l border-white/10 p-6 flex flex-col gap-5">
             <div className="flex items-center justify-between">
-              <Image src="/image/j02.png" alt="" width={120} height={30} />
+              <Image src="/image/j02.jpg" alt="" width={120} height={30} />
             </div>
             <div className="mt-4 flex flex-col">
               {NAV.map((item) => (
@@ -117,7 +117,7 @@ export default function Page() {
      <section className="relative w-full h-auto md:h-screen isolate">
   {/* 데스크톱 이미지 */}
   <Image
-    src="/image/main7.PNG"
+    src="/image/main7.jpg"
     alt="메인 이미지"
     fill
     className="absolute inset-0 object-contain hidden md:block"
@@ -125,7 +125,7 @@ export default function Page() {
 
   {/* 모바일 이미지 */}
   <Image
-    src="/image/main7-m.PNG"
+    src="/image/main7-m.jpg"
     alt="모바일 메인 이미지"
     width={400}
     height={300}
@@ -150,7 +150,7 @@ export default function Page() {
           {/* 오른쪽 이미지 */}
           <div className="md:w-1/2 flex justify-center">
             <img
-              src="/image/map2.PNG" // 이미지 경로
+              src="/image/map2.jpg" // 이미지 경로
               alt="법률사무소 적벽 위치"
               className="w-[600px] h-auto rounded-lg shadow-lg"
             />
@@ -190,7 +190,7 @@ export default function Page() {
               className="w-[450px] h-auto rounded-lg shadow-lg"
             />
             <img
-              src="/image/expert_it.png" // 이미지 경로
+              src="/image/expert_it.jpg" // 이미지 경로
               alt="IT"
               className="w-[450px] h-auto rounded-lg shadow-lg"
             />
@@ -207,7 +207,7 @@ export default function Page() {
       {Array.from({ length: 12 }).map((_, index) => (
         <img
           key={index}
-          src={`/image/re${index + 1}.png`} // 이미지 경로
+          src={`/image/re${index + 1}.jpg`} // 이미지 경로
           alt={`이미지 ${index + 1}`}
           className="w-full h-96 object-cover rounded-lg shadow-lg"
         />

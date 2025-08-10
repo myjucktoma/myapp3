@@ -4,9 +4,9 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 const NAV = [
-    { label: "형사", href: "/cri", img: "/image/cri1.PNG" },
-    { label: "민사", href: "/civil", img: "/image/civil1.PNG" },
-    { label: "IT", href: "/it", img: "/image/it1.PNG" },
+    { label: "형사", href: "/cri", img: "/image/cri1.jpg" },
+    { label: "민사", href: "/civil", img: "/image/civil1.jpg" },
+    { label: "IT", href: "/it", img: "/image/it1.jpg" },
 
 ];
 
@@ -22,7 +22,7 @@ export default function IT() {
             <div className="flex items-center gap-8">
                 <Link href="/" aria-label="Home">
                     <Image
-                        src="/image/j02.png"
+                        src="/image/j02.jpg"
                         alt="법률사무소 적벽 로고"
                         width={140}
                         height={36}
@@ -84,7 +84,7 @@ export default function IT() {
                     />
                     <div className="absolute right-0 top-0 h-full w-[78%] max-w-[340px] bg-[#0b0b0b] border-l border-white/10 p-6 flex flex-col gap-5">
                         <div className="flex items-center justify-between">
-                            <Image src="/image/j02.png" alt="" width={120} height={30} />
+                            <Image src="/image/j02.jpg" alt="" width={120} height={30} />
                         </div>
                         <div className="mt-4 flex flex-col">
                             {NAV.map((item) => (

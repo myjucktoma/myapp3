@@ -27,7 +27,9 @@ export default function SiteHeader() {
         {/* 좌측: 로고 + 메뉴 */}
         <div className="flex items-center gap-8">
           <Link href="/" aria-label="Home" className="block">
-            <Image src="/image/j02.png" alt="" width={140} height={36} priority />
+            <Image src="/image/j02.png" alt="" width={140} height={36} priority 
+            className="transition-transform duration-300 hover:scale-110"
+            />
           </Link>
 
           <nav
@@ -41,7 +43,7 @@ export default function SiteHeader() {
                   alt={item.label}
                   width={120}
                   height={40}
-                  className="hover:opacity-80 transition-opacity"
+                  className="hover:opacity-80 transition-opacity transition-transform duration-300 hover:scale-110"
                 />
 
 

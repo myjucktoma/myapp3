@@ -35,7 +35,14 @@ export default function Post1({ title, date, content, backHref }) {
         <div className="text-lg text-black mt-2 ml-auto text-right mb-6">
           <time>작성일: {date}</time>
           <span className="mx-2">|</span>
-          <span>작성자: 유관우 변호사</span>
+           <span>
+    작성자:{" "}
+    {backHref.includes("cri")
+      ? "형사전문변호사 유관우"
+      : backHref.includes("it")
+      ? "IT전문변호사 유관우"
+      : "유관우 변호사"}
+  </span>
         </div>
         <div
           className="post-content prose prose-lg text-black text-2xl mt-4 font-['Gulim'] leading-relaxed prose-p:my-60"

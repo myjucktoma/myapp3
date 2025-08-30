@@ -2,10 +2,24 @@
 
 
 html, body { height: 100%; }
-body { margin: 0; overflow-x: hidden; background:#000; } /* 가로 스크롤/여백 방지 */
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background: #fff;   /* 🔹 하얀 배경 */
+  color: #000;        /* 🔹 검정 글씨 */
+}
 
+html {
+  scrollbar-gutter: stable both-edges; /* 스크롤바 유무로 인한 가로 흔들림 방지 */
+}
 
-
+@font-face {
+  font-family: 'gulim';
+  src: url('/fonts/gulim.ttc') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 @font-face {
   font-family: 'WarhavenRegular';
   src: url('/fonts/NEXON_Warhaven_Regular.ttf') format('truetype');
@@ -50,6 +64,10 @@ body { margin: 0; overflow-x: hidden; background:#000; } /* 가로 스크롤/여
   -webkit-background-clip: text;
   background-clip: text;
 }
+.post-content p {
+  margin-top: 2.5rem;   /* 위 여백 */
+  margin-bottom: 2.5rem; /* 아래 여백 */
+}
 
 
 body {
@@ -67,7 +85,7 @@ body {
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: Gulim;
   --font-mono: var(--font-geist-mono);
 }
 

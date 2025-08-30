@@ -36,7 +36,7 @@ export default function Page() {
   {/* 데스크탑용 배경 */}
   <div
     className="hidden sm:block fixed inset-0 bg-center bg-cover bg-no-repeat bg-fixed -z-10"
-    style={{ backgroundImage: "url('/image/judge2.JPG')"
+    style={{ backgroundImage: "url('/image/judge2.jpg')"
       
      }}
   ></div>

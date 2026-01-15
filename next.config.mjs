@@ -1,4 +1,21 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  async redirects() {
+    return [
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'header',
+            key: 'x-forwarded-proto',
+            value: 'http',
+          },
+        ],
+        destination: 'https://xn--3l3b19r.com/:path*',
+        permanent: true, // 반드시 true (301)
+      },
+    ]
+  },
+}
 
-export default nextConfig;
+module.exports = nextConfig

@@ -12,10 +12,10 @@ const nextConfig = {
           },
         ],
         destination: 'https://xn--3l3b19r.com/:path*',
-        permanent: true, // 반드시 true (301)
+        permanent: true,
       },
     ]
   },
 }
 
-module.exports = nextConfig
+export default nextConfig

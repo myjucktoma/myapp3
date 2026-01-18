@@ -22,10 +22,15 @@ export default async function Page({ params }) {
 
   const { data, content } = matter(fileContents);
 
-  // ✅ Markdown 기본 규칙 사용 (remark-breaks 제거)
-  const processedContent = await remark()
-    .use(html) // Markdown → HTML
-    .process(content);
+  const normalized = content.replace(
+  /^(\d+)\.\s+/gm,
+  "$1\\. "
+);
+
+const processedContent = await remark()
+  .use(html)
+  .process(normalized);
+
 
   const contentHtml = processedContent.toString();
 

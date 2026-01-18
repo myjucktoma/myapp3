@@ -10,27 +10,34 @@ export async function generateStaticParams() {
   const files = fs.readdirSync(postsDir).filter((file) => file.endsWith(".md"));
 
   return files.map((file) => ({
-    id: path.basename(file, ".md"), // "1", "2", ...
+    id: path.basename(file, ".md"),
   }));
 }
 
 export default async function Page({ params }) {
-  const { id } = await params;
+  const { id } = params;
 
   const postPath = path.join(process.cwd(), "app/it/post", `${id}.md`);
   const fileContents = fs.readFileSync(postPath, "utf-8");
 
   const { data, content } = matter(fileContents);
 
-  const normalized = content.replace(
-  /^(\d+)\.\s+/gm,
-  "$1\\. "
+  // 2. 줄바꿈 유지 (엔터 1번 → <br>)
+  let normalized = content.replace(
+  /(?<!\n)\n(?!\n)/g,
+  "<br>\n"
 );
 
-const processedContent = await remark()
-  .use(html)
-  .process(normalized);
+// 3. 스페이스바 공백 유지
+// 연속된 스페이스를 &nbsp;로 변환
+normalized = normalized.replace(/ {2,}/g, (spaces) =>
+  "&nbsp;".repeat(spaces.length)
+);
 
+// 4. HTML 허용
+const processedContent = await remark()
+  .use(html, { sanitize: false }) // 필수
+  .process(normalized);
 
   const contentHtml = processedContent.toString();
 

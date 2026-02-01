@@ -15,7 +15,8 @@ export async function generateStaticParams() {
 }
 
 export default async function Page({ params }) {
-  const { id } = params;
+  const { id } = await params;
+
 
   const postPath = path.join(process.cwd(), "app/civil/post", `${id}.md`);
   const fileContents = fs.readFileSync(postPath, "utf-8");

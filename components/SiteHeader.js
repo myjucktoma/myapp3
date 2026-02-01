@@ -63,8 +63,10 @@ export default function SiteHeader() {
             text-xl font-semibold font-['WarhavenRegular'] ${textColor}
 
             bg-center bg-contain bg-no-repeat
-            hover:brightness-110
-            transition duration-200
+            transition-all duration-300
+
+  hover:shadow-[inset_0_0_14px_rgba(251,191,36,0.9)]
+  hover:scale-105
           `}
           style={{
             backgroundImage: "url('/image/frame6.png')",

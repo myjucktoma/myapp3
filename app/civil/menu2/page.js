@@ -23,8 +23,11 @@ function getPosts() {
     // gray-matter로 Front-Matter + 본문 분리
     const { data, content } = matter(fileContents);
 
+    // <u> 태그 제거
+const cleanContent = content.replace(/<\/?u>/g, "");
+
     // excerpt (앞 86글자, 특수기호 포함 그대로)
-    const excerpt = content.slice(0, 86) + "...";
+const excerpt = cleanContent.slice(0, 86) + "...";
 
     // id는 파일명에서 확장자 제거 (예: "1", "2")
     const id = path.basename(file, ".md");

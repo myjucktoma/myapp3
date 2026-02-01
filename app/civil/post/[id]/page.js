@@ -34,6 +34,10 @@ normalized = normalized.replace(/ {2,}/g, (spaces) =>
   "&nbsp;".repeat(spaces.length)
 );
 
+normalized = normalized
+  .replace(/<u>/g, "<strong><u>")
+  .replace(/<\/u>/g, "</u></strong>");
+
 // 4. HTML 허용
 const processedContent = await remark()
   .use(html, { sanitize: false }) // 필수

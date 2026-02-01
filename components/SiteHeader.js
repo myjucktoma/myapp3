@@ -3,15 +3,24 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
+
 
 const NAV = [
-  { label: "형사", href: "/cri", img: "/image/cri1.png" },
-  { label: "민사", href: "/civil", img: "/image/civil1.png" },
-  { label: "IT", href: "/it", img: "/image/it1.png" },
+  { label: "형사", href: "/cri" },
+  { label: "민사", href: "/civil" },
+  { label: "IT", href: "/it" },
+  { label: "행정", href: "/adm/menu2" },
+  { label: "메인", href: "/contact" },
 ];
 
 export default function SiteHeader() {
   const [open, setOpen] = useState(false);
+
+  const pathname = usePathname();
+
+  const textColor =
+    pathname === "/" ? "text-amber-400" : "text-black";
 
   // 모바일 메뉴 열렸을 때 배경 스크롤 방지
   useEffect(() => {
@@ -38,27 +47,34 @@ export default function SiteHeader() {
       </Link>
     </div>
 
-    {/* 메뉴 3개: 오른쪽으로 배치 */}
-    <nav
-      className="hidden lg:flex items-center gap-4 xl:gap-6 z-10 ml-auto pr-6"
+    {/* 메뉴 5개: 오른쪽으로 배치 */}
+      <nav
+      className="hidden lg:flex items-center gap-1 xl:gap-2 ml-auto pr-4"
       aria-label="Primary"
     >
       {NAV.map((item) => (
-        <Link key={item.label} href={item.href} className="relative inline-block">
-          <Image
-            src={item.img}
-            alt={item.label}
-            width={120}
-            height={40}
-            className="
-              hover:opacity-80 transition-opacity transition-transform duration-300 hover:scale-110
-              w-[90px] md:w-[100px] lg:w-[100px] xl:w-[120px]
-              h-auto
-            "
-          />
+        <Link
+          key={item.label}
+          href={item.href}
+          className={`
+            w-[50px] h-[36px]
+            flex items-center justify-center
+
+            text-xl font-semibold font-['WarhavenRegular'] ${textColor}
+
+            bg-center bg-contain bg-no-repeat
+            hover:brightness-110
+            transition duration-200
+          `}
+          style={{
+            backgroundImage: "url('/image/frame6.png')",
+          }}
+        >
+          {item.label}
         </Link>
       ))}
     </nav>
+
 
     {/* 중앙 타이틀 (항상 정중앙) */}
     <span

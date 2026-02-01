@@ -6,7 +6,7 @@ import html from "remark-html";
 import Post1 from "@/components/post1";
 
 export async function generateStaticParams() {
-  const postsDir = path.join(process.cwd(), "app/cri/post");
+  const postsDir = path.join(process.cwd(), "app/adm/post");
   const files = fs.readdirSync(postsDir).filter((file) => file.endsWith(".md"));
 
   return files.map((file) => ({
@@ -17,7 +17,7 @@ export async function generateStaticParams() {
 export default async function Page({ params }) {
   const { id } = params;
 
-  const postPath = path.join(process.cwd(), "app/cri/post", `${id}.md`);
+  const postPath = path.join(process.cwd(), "app/adm/post", `${id}.md`);
   const fileContents = fs.readFileSync(postPath, "utf-8");
 
   const { data, content } = matter(fileContents);
@@ -50,7 +50,7 @@ const processedContent = await remark()
       title={data.title}
       date={data.date}
       content={contentHtml}
-      backHref="/cri/menu2"
+      backHref="/adm/menu2"
     />
   );
 }

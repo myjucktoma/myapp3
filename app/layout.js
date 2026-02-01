@@ -4,10 +4,10 @@ import SiteFooter from "@/components/SiteFooter";
 
 export const metadata = {
   title: '법률사무소 적벽',
-  description: '형사전문변호사, IT전문변호사',
+  description: '형사전문변호사, IT전문변호사, 강남역, 서초동, 넓은 지하주차장',
   openGraph: {
     title: '법률사무소 적벽',
-    description: '형사전문변호사, IT전문변호사',
+    description: '형사전문변호사, IT전문변호사, 강남역, 서초동, 넓은 지하주차장',
     url: 'https://xn--3l3b19r.kr',
     siteName: '법률사무소 적벽',
     images: [

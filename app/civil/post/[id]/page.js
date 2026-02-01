@@ -34,6 +34,12 @@ normalized = normalized.replace(/ {2,}/g, (spaces) =>
   "&nbsp;".repeat(spaces.length)
 );
 
+normalized = normalized.replace(
+  /^(\d+)\.\s/gm,
+  "$1\\. "
+);
+
+
 normalized = normalized
   .replace(/<u>/g, "<strong><u>")
   .replace(/<\/u>/g, "</u></strong>");
@@ -43,7 +49,9 @@ const processedContent = await remark()
   .use(html, { sanitize: false }) // 필수
   .process(normalized);
 
-  const contentHtml = processedContent.toString();
+  const contentHtml = processedContent
+  .toString()
+  .replace(/\\\./g, ".");
 
   return (
     <Post1

@@ -15,7 +15,8 @@ export async function generateStaticParams() {
 }
 
 export default async function Page({ params }) {
-  const { id } = params;
+  const { id } = await params;
+
 
   const postPath = path.join(process.cwd(), "app/adm/post", `${id}.md`);
   const fileContents = fs.readFileSync(postPath, "utf-8");
@@ -38,13 +39,7 @@ normalized = normalized
   .replace(/<u>/g, "<strong><u>")
   .replace(/<\/u>/g, "</u></strong>");
 
-// 4. HTML 허용
-const processedContent = await remark()
-  .use(html, { sanitize: false }) // 필수
-  .process(normalized);
-
-  const contentHtml = processedContent.toString();
-
+const contentHtml = normalized;
   return (
     <Post1
       title={data.title}

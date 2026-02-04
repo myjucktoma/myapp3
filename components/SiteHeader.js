@@ -11,7 +11,7 @@ const NAV = [
   { label: "민사", href: "/civil" },
   { label: "IT", href: "/it" },
   { label: "행정", href: "/adm/menu2" },
-  { label: "메인", href: "/contact" },
+  { label: "메인", href: "/" },
 ];
 
 export default function SiteHeader() {
